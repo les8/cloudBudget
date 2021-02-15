@@ -85,8 +85,6 @@ h1 {
   font-weight: 700;
   font-size: 72px;
   line-height: 86px;
-  display: flex;
-  text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -173,7 +171,6 @@ h3 {
   width: 42px;
   height: 22px;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   background: url("../../img/icons/Down__arrow.svg") no-repeat right;
 }
@@ -194,10 +191,11 @@ h3 {
 }
 
 .header__info {
+  text-align: center;
   font-weight: 600;
 }
 .header__info h1 {
-  margin: 0 0 39px 264px;
+  margin: 0 auto 39px auto;
 }
 .header__info a {
   color: #ed4c5c;
@@ -206,15 +204,14 @@ h3 {
   background: #FFFFFF;
   border-radius: 6px;
   display: block;
-  padding: 17px 52px;
-  margin: 60px 0 0 473px;
+  padding-top: 15px;
+  margin: 60px auto 0 auto;
 }
 .header__info p {
   text-transform: none;
   font-style: normal;
   font-size: 24px;
   line-height: 150%;
-  text-align: center;
 }
 
 .main {
@@ -554,7 +551,6 @@ h3 {
   border-radius: 6px;
   margin-top: 24px;
   -webkit-appearance: none;
-     -moz-appearance: none;
           appearance: none;
   color: rgba(19, 39, 67, 0.5);
   padding-left: 31px;
@@ -627,3 +623,164 @@ h3 {
 .footer__socialMedia li {
   margin-right: 15px;
 }
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1439px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    width: 100%;
+  }
+  .container .header {
+    height: 700px;
+    padding: 50px;
+  }
+  .container .header .header__top {
+    margin-bottom: 117px;
+    font-size: 16px;
+    justify-content: center;
+  }
+  .container .header .header__top .header__menu {
+    margin: 0 100px;
+  }
+  .container .header .header__top .header__info h1 {
+    margin: 0 auto;
+  }
+  .container .owerview {
+    padding: 50px 75px;
+    height: 415px;
+  }
+  .container .owerview .owerview__info {
+    padding: 0;
+  }
+  .container .owerview .owerview__info p {
+    margin-top: 40px;
+    font-size: 18px;
+  }
+  .container .owerview .owerview__media {
+    margin: 0 0 0 50px;
+  }
+  .container .owerview .owerview__media .owerview__button {
+    display: none;
+  }
+  .container .features {
+    height: 500px;
+  }
+  .container .features h2 {
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  .container .technology {
+    height: 400px;
+  }
+  .container .technology h2 {
+    padding-top: 30px;
+  }
+  .container .technology .technology__info {
+    margin-top: 90px;
+  }
+  .container .appDwnld {
+    height: 400px;
+    padding: 50px;
+  }
+  .container .appDwnld .appDwnld__info {
+    margin-left: 5%;
+  }
+  .container .appDwnld .appDwnld__info h2 {
+    padding-top: 0;
+  }
+  .container .appDwnld .appDwnld__media li:first-child {
+    top: 77px;
+    left: 741px;
+  }
+  .container .appDwnld .appDwnld__media li:first-child img {
+    z-index: 3;
+  }
+  .container .appDwnld .appDwnld__media li:nth-child(2) {
+    top: 77px;
+    left: 591px;
+  }
+  .container .appDwnld .appDwnld__media li:nth-child(2) img {
+    z-index: 2;
+  }
+  .container .appDwnld .appDwnld__media li:last-child {
+    top: 50px;
+    left: 635px;
+  }
+  .container .appDwnld .appDwnld__media li:last-child img {
+    z-index: 1;
+  }
+  .container .contact {
+    height: 400px;
+    padding: 50px;
+    justify-content: center;
+  }
+  .container .footer {
+    height: 335px;
+    background: #FAFAFA;
+    padding: 50px 100px;
+    font-size: 12px;
+  }
+  .container .footer__info {
+    position: relative;
+    display: flex;
+    margin-bottom: 36px;
+  }
+  .container .footer__info address {
+    line-height: 18px;
+    font-style: normal;
+  }
+  .container .footer__info h3 {
+    text-align: left;
+    margin-bottom: 33px;
+  }
+  .container .footer__column {
+    margin-right: 10%;
+  }
+  .container .footer__column:first-child {
+    margin-right: 100px;
+  }
+  .container .footer__column:nth-child(2) a {
+    color: #000000;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .container .footer__column:nth-child(3) {
+    line-height: 14px;
+  }
+  .container .footer__column:nth-child(3) span {
+    display: block;
+    margin: 11px 0 21px 0;
+  }
+  .container .footer__column:last-child {
+    margin-right: 0;
+  }
+  .container .footer__socialMedia {
+    display: flex;
+  }
+  .container .footer__socialMedia li {
+    margin-right: 15px;
+  }
+}
+/* Landscape tablets and medium desktops 
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}*/
+/* Portrait tablets and small desktops 
+@media (min-width: 768px) and (max-width: 991px) {
+
+}*/
+/* Landscape phones and portrait tablets 
+@media (min-width: 481px) and (max-width: 767px) {
+
+}*/
+/* Portrait phones and smaller 
+@media (min-width: 321px) and (max-width: 480px) {
+
+}*/
+/* Iphone 5 
+@media (max-width: 320px) {
+
+}*/

@@ -13,8 +13,6 @@ h1{
 	font-weight: 700;
 	font-size: 72px;
 	line-height: 86px;
-	display: flex;
-	text-align: center;
 	letter-spacing: 0.05em;
 	text-transform: uppercase;
 	color: #FFFFFF;
@@ -120,9 +118,10 @@ h3{
 }
 
 .header__info {
+	text-align: center;
 	font-weight: 600;
 	h1{
-		margin: 0 0 39px 264px;
+		margin: 0 auto 39px auto;
 	}
 	a{
 		color: rgba(237, 76, 92, 1);
@@ -131,15 +130,14 @@ h3{
 		background: #FFFFFF;
 		border-radius: 6px;
 		display: block;
-		padding: 17px 52px;
-		margin: 60px 0 0 473px;
+		padding-top: 15px;
+		margin: 60px auto 0 auto;
 	}
 	p{
 		text-transform: none;
 		font-style: normal;
 		font-size: 24px;
 		line-height: 150%;
-		text-align: center;
 	}
 }
 
@@ -551,3 +549,184 @@ h3{
 		margin-right: 15px;
 	}
 }
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) and (max-width: 1439px) {
+	body {
+		font-size: 16px;
+	}
+	.container {
+		width: 100%;
+		.header {
+			height: 700px;
+			padding: 50px;
+			.header__top {
+				margin-bottom: 117px;
+				font-size: 16px;
+				justify-content: center;
+				.header__menu {
+					margin: 0 100px;
+				}
+				.header__info {
+					h1 {
+						margin: 0 auto;
+					}
+				}
+			}
+		}
+		.owerview {
+			padding: 50px 75px;
+			height: 415px;
+			.owerview__info {
+				padding: 0;
+				p{
+					margin-top: 40px;
+					font-size: 18px;
+				}
+			}
+			.owerview__media {
+				margin: 0 0 0 50px;
+				.owerview__button {
+					display: none;
+				}
+			}
+		}
+		.features {
+			h2{
+				padding-top: 30px;
+				margin-bottom: 30px;
+			}
+			height: 500px;
+			.features__columns {
+				.features__info {
+
+				}
+			}
+		}
+		.technology {
+			height: 400px;
+			h2{
+				padding-top: 30px;
+			}
+			.technology__info {
+				margin-top: 90px;
+			}
+		}
+		.appDwnld {
+			height: 400px;
+			padding: 50px;
+			.appDwnld__info {
+				margin-left: 5%;
+				h2{
+					padding-top: 0;
+				}
+				.appDwnld__links {}
+			}
+			.appDwnld__media {
+				li{
+					&:first-child{
+						top: 77px;
+						left: 741px;
+						img{
+							z-index: 3;
+						}
+					}
+					&:nth-child(2){
+						top: 77px;
+						left: 591px;
+						img{
+							z-index: 2;
+						}
+					}
+					&:last-child{
+						top: 50px;
+						left: 635px;
+						img{
+							z-index: 1;
+						}
+					}
+				}
+			}
+		}
+		.contact {
+			height: 400px;
+			padding: 50px;
+			justify-content: center;
+		}
+		.footer {
+			height: 335px;
+			background: #FAFAFA;
+			padding: 50px 100px;
+			font-size: 12px;
+		}
+
+		.footer__info {
+			position: relative;
+			display: flex;
+			margin-bottom: 36px;
+			address{
+				line-height: 18px;
+				font-style: normal;
+			}
+			h3{
+				text-align: left;
+				margin-bottom: 33px;
+			}
+		}
+
+		.footer__column{
+			margin-right: 10%;
+			&:first-child{
+				margin-right: 100px;
+			}
+			&:nth-child(2){
+				a{
+					color: #000000;
+					display: block;
+					margin-bottom: 8px;
+				}
+			}
+			&:nth-child(3){
+				line-height: 14px;
+				span{
+					display: block;
+					margin: 11px 0 21px 0;
+				}
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+
+		.footer__socialMedia {
+			display: flex;
+			li{
+				margin-right: 15px;
+			}
+		}
+	}
+}
+
+/* Landscape tablets and medium desktops 
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}*/
+
+/* Portrait tablets and small desktops 
+@media (min-width: 768px) and (max-width: 991px) {
+
+}*/
+
+/* Landscape phones and portrait tablets 
+@media (min-width: 481px) and (max-width: 767px) {
+
+}*/
+
+/* Portrait phones and smaller 
+@media (min-width: 321px) and (max-width: 480px) {
+
+}*/
+/* Iphone 5 
+@media (max-width: 320px) {
+
+}*/
