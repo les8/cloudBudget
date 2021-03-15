@@ -235,6 +235,7 @@ h3{
 }
 
 .owerview__button {
+	display: none;
 	background: rgba(237, 76, 92, 1);
 	background-image: url('../../img/icons/Right_arrow.svg');
 	background-repeat: no-repeat;
@@ -291,6 +292,65 @@ h3{
 		line-height: 150%;
 		color: #ED4C5C;
 	}
+}
+
+.popup-js {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-x: hidden;
+	overflow-y: auto;
+	transition: all 0.8s ease 0s;
+}
+
+.popup-js__area{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.popup-js__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	padding: 30px 10px;
+}
+
+.popup-js__content {
+	background-color: #fff;
+	color: #000;
+	width: 50%;
+	padding: 30px;
+	position: relative;
+	text-align: justify;
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+}
+
+.popup-js__close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	text-decoration: none;
+	color: #000;
+}
+
+.popup-js__title {
+	font-size: 40px;
+	margin-bottom: 1em;
+}
+.popup-js__text {
+	text-transform: uppercase;
 }
 
 .technology {
@@ -597,11 +657,6 @@ h3{
 				margin-bottom: 30px;
 			}
 			height: 500px;
-			.features__columns {
-				.features__info {
-
-				}
-			}
 		}
 		.technology {
 			height: 400px;
@@ -620,7 +675,6 @@ h3{
 				h2{
 					padding-top: 0;
 				}
-				.appDwnld__links {}
 			}
 			.appDwnld__media {
 				li{
