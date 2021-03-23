@@ -1,5 +1,4 @@
-let link = document.getElementById("popup-js__link")
-let link2 = document.getElementById("popup-js__link2")
+const link = [...document.getElementsByClassName("popup-js__link")]
 let title = document.getElementById("popup-title")
 let text = document.getElementById("popup-text")
 const area = document.getElementById("popup-area")
@@ -8,8 +7,12 @@ let pop = document.getElementById("popup-js")
 let cont = document.getElementById("popup-content")
 
 
-link.addEventListener("click", function() {showPopUp(1)})
-link2.addEventListener("click", function() {showPopUp(2)})
+link.forEach((element, index) => {
+    element.addEventListener("click", function(){
+        showPopUp(index)
+    })
+})
+
 area.addEventListener("click", closePopUp)
 close.addEventListener("click", closePopUp)
 
@@ -22,13 +25,16 @@ function showPopUp(parameter) {
             closePopUp()
         }
     })
-    if (parameter == 1){
+    if (parameter == 0){
         title.innerHTML = "Заголовок 1"
         text.innerHTML = "Текст 1"
-    } else if (parameter == 2) {
+    } else if (parameter == 1) {
         title.innerHTML = "Заголовок 2"
         text.innerHTML = "Текст 2"
-    } else return           
+    } else {
+        title.innerHTML = "Заголовок 3"
+        text.innerHTML = "Текст 3"
+    }          
 }
 
 function closePopUp() {
